@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useSession } from "../context/SessionContext";
 import Link from "next/link";
+import { BASE_URL } from "@/utils/baseurl";
 
 export default function AccountPage() {
   const { session } = useSession();
@@ -44,7 +45,7 @@ export default function AccountPage() {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/me/accounts/transactions",
+        `http://${BASE_URL}/me/accounts/transactions`,
         {
           method: "POST", // Use POST to match the backend
           headers: {

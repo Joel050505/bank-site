@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "transfer": "wsl rsync -avz -e \"ssh -i ~/AWS.pem\" --exclude=node_modules --exclude=.next  ../bank-test-master  ubuntu@ec2-51-20-109-204.eu-north-1.compute.amazonaws.com:/home/ubuntu"
   },
   "dependencies": {
     "lucide-react": "^0.483.0",
