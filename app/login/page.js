@@ -19,7 +19,7 @@ export default function Login() {
     const newUser = { username, password };
 
     try {
-      const response = await fetch(`http://${BASE_URL}/sessions`, {
+      const response = await fetch(`http://${BASE_URL}:4000/sessions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

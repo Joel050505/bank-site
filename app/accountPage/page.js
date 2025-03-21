@@ -16,7 +16,7 @@ export default function AccountPage() {
     }
 
     try {
-      const response = await fetch("http://localhost:4000/me/accounts", {
+      const response = await fetch(`http://${BASE_URL}:4000/me/accounts`, {
         method: "POST", // Use POST to match the backend
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export default function AccountPage() {
 
     try {
       const response = await fetch(
-        `http://${BASE_URL}/me/accounts/transactions`,
+        `http://${BASE_URL}:4000/me/accounts/transactions`,
         {
           method: "POST", // Use POST to match the backend
           headers: {
